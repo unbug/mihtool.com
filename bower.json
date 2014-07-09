@@ -1,0 +1,25 @@
+{
+  "name": "mihtool.com",
+  "version": "0.0.1",
+  "authors": [
+    "unbug <tidelgl@gmail.com>"
+  ],
+  "keywords": [
+    "mihtool"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.mihtool.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "~0.3.3",
+    "core-elements": "Polymer/core-elements#master",
+    "paper-elements": "Polymer/paper-elements",
+    "paper-icon-button": "Polymer/paper-icon-button"
+  }
+}
