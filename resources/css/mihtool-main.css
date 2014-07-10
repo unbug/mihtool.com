@@ -1,0 +1,96 @@
+:host {
+  font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+  color: #656464;
+}
+a:link,a:visited{
+  color: #549eb9;
+  text-decoration: none;
+}
+a:active,a:hover{
+  text-decoration: underline;
+}
+[drawer] {
+  background-color: #fff;
+}
+
+[main] > div {
+  padding: 2em;
+}
+
+[drawer] > core-item {
+  padding: 1em;
+}
+
+[main] paper-checkbox {
+  margin-right: 1em;
+}
+
+[main] {
+  height: 100%;
+  background-color: #f1f1f3;
+}
+
+[drawer]{
+  background-color: #eee;
+  color: #444;
+}
+[drawer] a,[drawer] a:active,[drawer] a:link,[drawer] a:visited{
+  color: #444;
+}
+[drawer]>header{
+  padding: 20px;
+}
+[drawer] core-item{
+  margin: 5px 20px;
+  min-height: 30px !important;
+}
+[main]{
+  background-color: #e8eaf6;
+}
+[main] core-toolbar {
+  background-color: #3f51b5;
+  color: #fff;
+}
+[main] core-toolbar header h1{
+  font-size: 40px;
+}
+[main] core-toolbar header summary{
+  display: none;
+}
+[main] core-toolbar.tall header{
+  padding: 30px 0px 40px;
+}
+[main] core-toolbar.tall header h1{
+  margin: 200px 0 0 0;
+}
+[main] core-toolbar.tall header summary{
+  margin: 5px;
+  display: block;
+}
+.logo{
+  width: 30px;
+  margin-right: 10px;
+}
+.content{
+  padding: 30px;
+}
+.content>section,.content header{
+  width: 100%;
+  max-width: 960px;
+}
+.content h4,.content p{
+  margin: 5px 0;
+}
+.slogon{
+  padding: 10px;
+  background-color: #bdbdbd;
+  color: #333;
+}
+.slogon>img{
+  margin-right: 10px;
+  width: 100px;
+  height: 100px;
+}
+.screenshots img{
+  max-width: 580px;
+}
