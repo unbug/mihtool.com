@@ -18,6 +18,7 @@
 <polymer-element name="mihtool-main">
   <template>
    <link rel="stylesheet" href="../resources/css/mihtool-main.css">
+   
    <core-drawer-panel id="drawerPanel" responsiveWidth="2048px" narrow="{{narrow}}">
       <core-header-panel drawer  mode="standard">
         <header>
@@ -186,7 +187,10 @@
         </section>
       </core-header-panel>
     </core-drawer-panel>
-</template>
+   <content>
+   </content>
+  </template>
+
 <script>
  Polymer('mihtool-main', {
    toggleDrawer: function() {

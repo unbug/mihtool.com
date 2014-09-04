@@ -12,19 +12,6 @@ a:active,a:hover{
 [drawer] {
   background-color: #fff;
 }
-
-[main] > div {
-  padding: 2em;
-}
-
-[drawer] > core-item {
-  padding: 1em;
-}
-
-[main] paper-checkbox {
-  margin-right: 1em;
-}
-
 [main] {
   height: 100%;
   background-color: #f1f1f3;
@@ -38,7 +25,7 @@ a:active,a:hover{
   color: #444;
 }
 [drawer]>header{
-  padding: 20px;
+  margin: 20px;
 }
 [drawer] core-item{
   margin: 5px 20px;
