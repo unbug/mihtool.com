@@ -1,79 +1,545 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+<head lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<title>MIHTool - iOS Web Debugger Pro</title> 
+	
+	<meta name="mobile-web-app-capable" content="yes">
+  	<meta name="apple-mobile-web-app-capable" content="yes">
+  	<link rel="shortcut icon" href="resources/images/logo/iPad-Retina.png" >
+  	<link rel="apple-touch-icon" href="resources/images/logo/iPad-Retina.png"/>
+  	<link rel="apple-touch-icon" sizes="114x114" href="resources/images/logo/iPhone-Retina.png"/>
+  	<link rel="apple-touch-icon" sizes="72x72" href="resources/images/logo/iPhone-Retina.png"/>
+  	<link rel="apple-touch-icon" sizes="144x144" href="resources/images/logo/iPad-Retina.png"/>
+  	
+	<meta name="description" content="MIHTool helps Front-End Engineers to debug and optimize their webpages on iPad and iPhone" />	    
+	<meta name="keywords" content="mobile web debug,remote debug safari,mobile web inspect,mobile html editor,Emulate iPhone,weinre for mobile,firebug for mobile,mobile web user agent">
+	<meta property="og:title" content="">
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="mihtool : mihtool.com">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">	
+	
+	<link rel="prefetch" href="images/zoom.png">
+	<script>
+		window.onload = function(){
+			var link = document.createElement('link');
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = 'http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext';
+			//document.head.appendChild(link);
+		}
+	</script>
+</head>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<body>
+	<div class="navbar navbar-fixed-top" data-activeslide="1">
+		<div class="container">
+		
+			<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+			
+			<div class="nav-collapse collapse navbar-responsive-collapse">
+				<ul class="nav row">
+					<li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#slide-1" title="Next Section"><span class="icon icon-home"></span> <span class="text">HOME</span></a></li>
+					<li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="icon icon-download"></span> <span class="text">INSTALL</span></a></li>
+					<li data-slide="3" class="col-12 col-sm-2"><a id="menu-link-3" href="#slide-3" title="Next Section"><span class="icon icon-picture"></span> <span class="text">SCREENSHOT</span></a></li>
+					<li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#slide-4" title="Next Section"><span class="icon icon-eye-open"></span> <span class="text">FEATURE</span></a></li>
+					<li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-5" href="#slide-5" title="Next Section"><span class="icon icon-bullhorn"></span> <span class="text">LEARN</span></a></li>
+					<li data-slide="6" class="col-12 col-sm-2"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="icon icon-envelope"></span> <span class="text">SUPPORT</span></a></li>
+					<li data-slide="7"></li>
+					<li data-slide="8"></li>
+					<li data-slide="9"></li>
+				</ul>
+				<div class="row">
+					<div class="col-sm-2 active-menu"></div>
+				</div>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</div><!-- /.navbar -->
+	
+	
+	<!-- === Arrows === -->
+	<div id="arrows">
+		<div id="arrow-up" class="disabled"></div>
+		<div id="arrow-down"></div>
+		<div id="arrow-left" class="disabled visible-lg"></div>
+		<div id="arrow-right" class="disabled visible-lg"></div>
+	</div><!-- /.arrows -->
+	
+	
+	<!-- === MAIN Background === -->
+	<div class="slide story" id="slide-1" data-slide="1">
+		<div class="container">
+			<div id="home-row-1" class="row clearfix">
+				<div class="col-12">
+					<img src="images/mih/logo/iPad-Retina.png" width="80"/>
+					<h1 class="font-semibold">MIHTool</h1>
+					<h4 class="font-thin">MIHTool helps Front-End Engineers to  <span class="font-semibold">debug</span> and  <span class="font-semibold">optimize</span> their webpages on iPad and iPhone</h4>
+					<br>
+					<br>
+				</div><!-- /col-12 -->
+			</div><!-- /row -->
+			<div id="home-row-2" class="row clearfix">
+				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="2"><i class="icon icon-download-alt"></i></div><span>INSTALL</span></div>
+				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="4"><i class="icon icon-eye-open"></i></div><span>FEATURE</span></div>
+				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="3"><i class="icon icon-camera" width="64"></i></div><span>SCREENSHOT</span></div>
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /slide1 -->
+	
+	<!-- === Slide 2 === -->
+	<div class="slide story" id="slide-2" data-slide="2">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-thin">Getting started</div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+			<div class="row subtitle-row">
+				<img src="images/mih/screenshots/qr-150x150.png" width="100"/>
+				<div class="col-12 font-thin" style="font-size: 26px;">MIHTool is free!If you love MIHTool and like to help me to make MIHTool better,I’ll appreciate you could&nbsp;<a class="re-link" href="https://itunes.apple.com/us/app/mihtool-web-debugger-pro-fee/id599482707?ls=1&amp;mt=8">buy&nbsp;one</a>!</div>
+			</div><!-- /row -->
+			<div class="row content-row">
+				<div class="col-12 col-lg-3 col-sm-6">
+					<h2 class="font-semibold">MIHTool <span class="font-thin">Basic</span></h2>
+					<h4 class="font-thin"><a target="_blank" class="btn btn-default btn-lg re-link" role="button" href="https://itunes.apple.com/us/app/mihtool/id584739126?ls=1&amp;mt=8">View in App Store</a></h4>
+				</div><!-- /col12 -->
+				<div class="col-12 col-lg-3 col-sm-6">
+					<h2 class="font-semibold">MIHTool <span class="font-thin">Pro</span></h2>
+					<h4 class="font-thin"><a target="_blank" class="btn btn-primary btn-lg re-link" role="button" href="https://itunes.apple.com/us/app/mihtool-web-debugger-pro-fee/id599482707?ls=1&amp;mt=8">View in App Store</a></h4>
+				</div><!-- /col12 -->
+				<div class="col-12 col-lg-3 col-sm-6">
+					<h2 class="font-semibold">Feedback</h2>
+					<h4 class="font-thin"><a target="_blank" class="btn btn-info btn-lg re-link" role="button" href="https://groups.google.com/group/mihtool">Google group</a></h4>
+				</div><!-- /col12 -->
+				<div class="col-12 col-lg-3 col-sm-6">
+					<h2 class="font-semibold">Learn More</h2>
+					<h4 class="font-thin"><a target="_blank" class="btn btn-success btn-lg" role="button" href="#slide-5" onclick="goToByScroll(5)">What devs say</a></h4>
+				</div><!-- /col12 -->
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /slide2 -->
+	
+	<!-- === SLide 3 - Portfolio -->
+	<div class="slide story" id="slide-3" data-slide="3">
+		<div class="row">
+			<div class="col-12 col-sm-4 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/mih/screenshots/0.png"><img class="thumb" src="images/mih/screenshots/0.png" alt=""></a></div>
+			<div class="col-12 col-sm-4 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/mih/screenshots/1.png"><img class="thumb" src="images/mih/screenshots/1.png" alt=""></a></div>
+			<div class="col-12 col-sm-4 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/mih/screenshots/2.png"><img class="thumb" src="images/mih/screenshots/2.png" alt=""></a></div>
+			<div class="col-12 col-sm-4 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/mih/screenshots/3.png"><img class="thumb" src="images/mih/screenshots/3.png" alt=""></a></div>
+			<div class="col-12 col-sm-4 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/mih/screenshots/4.png"><img class="thumb" src="images/mih/screenshots/4.png" alt=""></a></div>
+			<div class="col-12 col-sm-4 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/mih/screenshots/5.png"><img class="thumb" src="images/mih/screenshots/5.png" alt=""></a></div>
+			<div class="col-12 col-sm-4 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/mih/screenshots/6.png"><img class="thumb" src="images/mih/screenshots/6.png" alt=""></a></div>
+			<div class="col-12 col-sm-4 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/mih/screenshots/7.png"><img class="thumb" src="images/mih/screenshots/7.png" alt=""></a></div>
+			<div class="col-12 col-sm-4 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/mih/screenshots/8.png"><img class="thumb" src="images/mih/screenshots/8.png" alt=""></a></div>
+		</div><!-- /row -->
+	</div><!-- /slide3 -->
+	
+	<!-- === Slide 4 - Process === -->
+	<div class="slide story" id="slide-4" data-slide="4">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-thin">MIHTool can <span class="font-semibold">do</span> right now</div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+			<div class="row subtitle-row">
+				<div class="col-12 left-ajust">
+		            <section>
+		              <h2>For iPad</h2>
+		              <p>1.Inline Web inspector(like Chrome DevTool or FireBug):With Elements,Resources,Network,Timeline,Console panel.</p>
+		              <p>2.Web inspector remote(weinre):remote to debug and optimize your mobile webpages on your computer(window,mac,linux with chrome).</p>
+		              <p>3.Online Web Inspector.</p>
+		              <p>4.HTML editor:view webpage source code with syntax highlighting and formatting;editing source code or creare a new webpage and preview the result.</p>
+		              <p>5.Remote control(With HTTP Server):Remote to,Load URL in MIHTool|Safari|Chrome;Inject Javascript in current webpage;Clear website data;Get HAR data;Get source code;Get screenshots…</p>
+		              <p>6.Show WebKit Debug Borders(Compositing Render Layers).</p>
+		              <p>7.Show Webkit Repaint Counter(Paint Rects).</p>
+		              <p>8.Emulate iPhone.</p>
+		              <p>9.User agent switcher.</p>
+		              <p>10.More developer bookmarklets:Firebug,YSlow,JS Console,PageSpeed,GTmetrix…</p>
+		              <p>11.Evaluating JavaScript in the address bar.</p>
+		              <p>12.Full screen mode(Shake Device To Toggle Full Screen Mode).</p>
+		              <p>13.Disable cache.</p>
+		              <p>14.Clear history,clear cache,clear cookies, clear local storage.</p>
+		              <p>15.Keep awake(Default is ON).</p>
+		              <p>16.HAR Viewer.(Also see <a target="_blank" class="re-link" href="https://github.com/unbug/logproxy">logproxy</a>)</p>
+		              <p>17.Performance API.</p>
+		              <p>18.Polyfill Manager(simulate APIs for javaScript to Objective-C communication,<a target="_blank" class="re-link" href="http://youtu.be/uL2feHKevRE">demo</a>)</p>
+		              <p>19.NPM Modules (To require() any module on npm in web inspector console <a target="_blank" class="re-link" href="https://gist.github.com/mathisonian/c325dbe02ea4d6880c4e">with browserify</a>)</p>
+		            </section>
+		            <section>
+		              <h2>For iPhone</h2>
+		              <p>1.Web inspector remote(weinre):remote to debug and optimize your mobile webpages on your computer(window,mac,linux with chrome).</p>
+		              <p>2.Online Web Inspector.</p>
+		              <p>3.Remote control(With HTTP Server):Remote to,Load URL in MIHTool|Safari|Chrome;Inject Javascript in current webpage;Clear website data;Get HAR data;Get source code;Get screenshots…</p>
+		              <p>4.Show WebKit Debug Borders(Compositing Render Layers).</p>
+		              <p>5.Show Webkit Repaint Counter(Paint Rects).</p>
+		              <p>6.Evaluating JavaScript in the address bar.</p>
+		              <p>7.Disable cache *when the switch button is ON*.</p>
+		              <p>8.Full screen mode(Shake Device To Toggle Full Screen Mode).</p>
+		              <p>9.Keep awake(Default is ON).</p>
+		              <p>10.Performance API.</p>
+		              <p>11.Polyfill Manager(simulate APIs for javaScript to Objective-C communication,<a target="_blank" class="re-link" href="http://youtu.be/uL2feHKevRE">demo</a>)</p>
+		              <p>12.NPM Modules (To require() any module on npm in web inspector console <a target="_blank" class="re-link" href="https://gist.github.com/mathisonian/c325dbe02ea4d6880c4e">with browserify</a>)</p>
+		            </section>
+				</div><!-- /col12 -->
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /slide4 -->
+	
+	<!-- === Slide 5 === -->
+	<div class="slide story" id="slide-5" data-slide="5">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-thin"><span class="font-semibold">What devs say about MIHTool</span></div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+			<div class="row subtitle-row">
+				<div class="col-12 font-light">
+					<section class="left-ajust">
+		              <ul>
+		                <li>Paul Bakaus(Studio 5 CTO at Zynga) :&nbsp;<a class="re-link" href="http://paulbakaus.com/tutorials/performance/mihtool-the-ios-web-debugger/">MIHTool, the iOS web debugger</a></li>
+		                <li>GoogleDevelopers :&nbsp;<a class="re-link"  href="https://www.youtube.com/watch?v=jXqrgtm-yF8">Mobile Web Thursday : Dev Tools</a></li>
+		                <li>Google I/O 2013 :&nbsp;<a class="re-link" href="https://developers.google.com/events/io/sessions/324558168">The Modern Workflow for Developing the Mobile Web</a>&nbsp;(By&nbsp;<a class="re-link"  href="http://gauntface.co.uk/">Matt Gaunt</a>),&nbsp;<a href="http://io13mobileworkflow.appspot.com/">Slide</a></li>
+		                <li>Frontrend in Tokyo :&nbsp;<a class="re-link" href="https://speakerdeck.com/addyosmani/mobile-web-development-workflow">Mobile Web Development Workflow</a>&nbsp;(by<a class="re-link"  href="http://addyosmani.com/"> Addy Osmani</a>)</li>
+		                <li>Jan Polzer: <a class="re-link" href="http://www.maxiorel.cz/jak-na-vzdalene-ladeni-webu-na-ipadu-pomoci-mihtool">Jak na to – vzdálené ladění webu na iPadu pomocí MIHTool</a></li>
+		                <li>Tribo do C.I.Podcast :&nbsp;<a class="re-link" href="http://tribodoci.net/artigos/mihtool-faca-os-seus-aplicativos-web-para-ios-acontecer/">MIHTOOL: FAÇA OS SEUS APLICATIVOS WEB PARA IOS ACONTECER</a></li>
+		                <li>Yuka :&nbsp;<a class="re-link" href="http://jucke.com/webdev/mihtool-ios-web-debugger/">MIHTool: iOS web debugger</a></li>
+		                <li>unbug :&nbsp;<a class="re-link" href="http://www.iunbug.com/archives/2013/03/17/767.html">与大家分享MIHTool的开发心得</a></li>
+		                <li>InfoQ :&nbsp;<a  class="re-link" href="http://www.infoq.com/cn/news/2013/03/mihtool-interview">iOS Web开发调试工具MIHTool作者访谈</a></li>
+		              </ul>
+		            </section>
+				</div>
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /slide5 -->
+	
+	<!-- === Slide 6 / Contact === -->
+	<div class="slide story" id="slide-6" data-slide="6">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-light">Support and bug reports</div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+			<div class="row subtitle-row">
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+				<div class="col-12 font-light">
+					<p>Community discussion, questions, and informal bug reporting is done on the&nbsp;<a class="re-link"  href="https://groups.google.com/group/mihtool" class="re-link">MIHTool&nbsp;Google group</a>.Please feel free to twitter me&nbsp;<a href="https://twitter.com/unbug">@unbug</a>&nbsp;,E-mail:&nbsp;<a class="re-link" href="mailto:tidelgl@gmail.com?subject=About%20MIHTool">tidelgl@gmail.com</a></p>
+				</div>
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /Slide 6 -->
+	<!-- === Slide 7 / Contact === -->
+	<div class="slide story white" id="slide-7" data-slide="7">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-light">Thanks</div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+			<div class="row subtitle-row">
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+				<div class="col-12 font-light left-ajust">
+	              <ul>
+	                <li><a class="re-link" href="http://paulbakaus.com/" target="_blank">Paul Bakaus</a>(Studio 5 CTO at Zynga)’s features guidance</li>
+	                <li>App Icon designed by&nbsp;<a class="re-link" href="https://twitter.com/Rude" target="_blank">Rude</a>(Graphic and interaction design specialist at Mortensen)</li>
+	              </ul>
+				</div>
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /Slide 7 -->
+	<!-- === Slide 8 / Contact === -->
+	<div class="slide story black" id="slide-8" data-slide="8">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-light">Videos</div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+			<div class="row subtitle-row">
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+				<div class="col-12 font-light">
+					<article>
+		              <h2>Inline web inspector</h2>
+		              <iframe width="640" height="480" src="//www.youtube.com/embed/I-joxZbdk0s" frameborder="0" allowfullscreen></iframe>
+		            </article>
+		            <article>
+		              <h2>Polyfill Manager(simulate APIs for javaScript to Objective-C communication)</h2>
+		              <iframe width="640" height="480" src="//www.youtube.com/embed/uL2feHKevRE" frameborder="0" allowfullscreen></iframe>
+		            </article>
+				</div>
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /Slide 8 -->
+	<div class="slide story white" id="slide-9" data-slide="9">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-light">Change log</div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+			<div class="row subtitle-row">
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+				<div class="col-12 font-light">
+					<div class="left-ajust">
+						<p><strong>V6.0-2014.09.05</strong></p>
+						<p>For iPad<br>
+						1.!+Add,NPM Modules (To require() any module on npm in web inspector console with browserify).<br>
+						2.!+Add,Remote control to toggle NPM Modules.<br>
+						For iPhone<br>
+						1.!+Add,Remote control to toggle NPM Modules. (To require() any module on npm in web inspector console with browserify).</p>
+						<p><strong>V5.9-2014.03.02</strong></p>
+						<p>For iPad<br>
+						1.!*Fix,HAR Viewer cause crash on 64-bit device.<br>
+						2.!*Fix,Remote control to get HAR from MIHTool Console cause crash on 64-bit device.<br>
+						For iPhone<br>
+						1.!*Fix,Remote control to get HAR from MIHTool Console cause crash on 64-bit device.</p>
+						<p><strong>V5.8-2013.11.29</strong></p>
+						<p>For iPad<br>
+						1.+Add,Update HTTP Server.<br>
+						2.+Add,Update for 64-bit.<br>
+						3.!-Remove,No long support iOS5.<br>
+						For iPhone<br>
+						1.+Add,Update HTTP Server.<br>
+						2.+Add,Update for 64-bit.<br>
+						3.!-Remove,No long support iOS5.</p>
+						<p><strong>V5.7-2013.10.08</strong></p>
+						<p>For iPad<br>
+						1.!+Add,Update for iOS7.<br>
+						2.+Add,New user agent list.<br>
+						3.*Fix,PageSpeed bookmarklet not works issue.<br>
+						For iPhone<br>
+						1.!+Add,Update for iOS7.</p>
+						<p><strong>V5.6-2013.08.07</strong></p>
+						<p>For iPad<br>
+						1.*Fix,Remote control to load url decode issue.<br>
+						For iPhone<br>
+						1.*Fix,Remote control to load url decode issue.<br>
+						2.!*Fix,Portrait and landscape switch issue.</p>
+						<p><strong>V5.5-2013.07.03</strong></p>
+						<p>For iPad<br>
+						1.!+Add,Polyfill Manager(simulate API for javaScript to Objective-C communication,<a href="http://youtu.be/uL2feHKevRE">demo</a>)<br>
+						2.!*Fix,Can not remote control to load HTTPS URL in Chrome.<br>
+						For iPhone<br>
+						1.!+Add,Polyfill Manager(simulate API for javaScript to Objective-C communication,<a href="http://youtu.be/uL2feHKevRE">demo</a>)<br>
+						2.!*Fix,Can not remote control to load HTTPS URL in Chrome.</p>
+						<p><strong>V5.4-2013.05.03</strong></p>
+						<p>For iPad<br>
+						1.!+Add,Remote control to switch weinre server.<br>
+						2.+Add,Remote control to get screenshots.<br>
+						3.+Add,Remote control to load URL in Mobile Safari<br>
+						4.+Add,Remote control to load URL in Google Chrome<br>
+						5.+Add,Double click to edit element style and attributes in inline web inspector<br>
+						6.!*Fix,Web inspector not working in the latest Chrome Canary.<br>
+						For iPhone<br>
+						1.!+Add,Remote control to switch weinre server.<br>
+						2.+Add,Remote control to get screenshots.<br>
+						3.+Add,Remote control to load URL in Mobile Safari<br>
+						4.+Add,Remote control to load URL in Google Chrome<br>
+						5.!*Fix,Web inspector not working in the latest Chrome Canary.</p>
+						<p><strong>V5.3-2013.04.01</strong></p>
+						<p>For iPad<br>
+						1.!+Add,Remote control to view history.<br>
+						2.+Add,Remote control to clear history.<br>
+						3.+Add,Remote control to get source code from MIHTool Console.<br>
+						4.+Add,Remote control to get generated source Code from MIHTool Console.<br>
+						5.*Fix,Performance API not work in some cases.<br>
+						6.*Fix,Apple-Specific Event Meta Tag issue.</p>
+						<p>For iPhone<br>
+						1.!+Add,View history.<br>
+						2.!+Add,Remote control to view history.<br>
+						3.+Add,Remote control to clear history.<br>
+						4.+Add,Remote control to get source code from MIHTool Console.<br>
+						5.+Add,Remote control to get generated source Code from MIHTool Console.<br>
+						6.+Add,New about page with more options.<br>
+						7.*Fix,Performance API not work in some cases.<br>
+						8.*Fix,Apple-Specific Event Meta Tag issue.</p>
+						<p><strong>V5.2-2013.03.15</strong></p>
+						<p>For iPad<br>
+						1.!+Add,Online Web Inspector.<br>
+						2.+Add,Toggle zoom inline web inspector option.<br>
+						3.+Add,window.open() and window.close() support.<br>
+						4.+Add,Update HTTP Server.<br>
+						5.!*Fix,Inline web inspector can not refresh issue.</p>
+						<p>For iPhone<br>
+						1.!+Add,Online Web Inspector.<br>
+						2.+Add,Update HTTP Server.</p>
+						<p><strong>V5.1-2013.03.08</strong></p>
+						<p>For iPad<br>
+						1.+Add,Keep awake default is ON.<br>
+						2.!*Fix,HTML editor decode issue.<br>
+						3.*Fix,Web inspector not show up in some case.</p>
+						<p>For iPhone<br>
+						1.+Add,Keep awake default is ON.</p>
+						<p><strong>V5.0-2013.03.01</strong></p>
+						<p>For iPad<br>
+						1.!+Add,HAR Viewer.<br>
+						2.!+Add,Performance API.<br>
+						3.!+Add,SSL support.<br>
+						4.+Add,Read/modify external stylesheets/scripts for Web inspector(include Web inspector remote) and Firebug.<br>
+						5.+Add,Clear application cache when clear cache.<br>
+						6.+Add,Remote control to quit MIHTool.<br>
+						7.+Add,Remote control to toggle Media Playback.<br>
+						8.+Add,Remote control to view performance API from MIHTool Console.<br>
+						9.+Add,Remote control to get HAR from MIHTool Console.<br>
+						10.+Add,HTML Editor performance optimized.<br>
+						11.+Add,Decent new App Icon (By @Rude).<br>
+						12.*Fix,Some of Chrome plugins cause web inspector “Failed to load resource ‘Popover.js’” issue.<br>
+						13.*Fix,Web inspector toolbar blocked by console view when open console view in other panel and minimize web inspector.<br>
+						14.*Fix,Shortcut buttons of HTML editor lost focus issue.</p>
+						<p>For iPhone<br>
+						1.!+Add,Performance API.<br>
+						2.!+Add,SSL support.<br>
+						3.+Add,Read/modify external stylesheets/scripts for Web inspector remote.<br>
+						4.+Add,Clear application cache when clear cache.<br>
+						5.+Add,Remote control to quit MIHTool.<br>
+						6.+Add,Remote control to toggle Media Playback.<br>
+						7.+Add,Remote control to view performance API from MIHTool Console.<br>
+						8.+Add,Remote control to get HAR from MIHTool Console.<br>
+						9.+Add,Decent new App Icon (By @Rude).<br>
+						10.*Fix,Some of Chrome plugins cause web inspector “Failed to load resource ‘Popover.js’” issue.</p>
+						<p><strong>V4.0-2013.01.29</strong></p>
+						<p>For iPad<br>
+						1.!+Add,Inline Web inspector(like Chrome DevTool or FireBug):With Elements,Resources,Network,Timeline,Console panel.<br>
+						2.!+Add,Web inspector remote(weinre):remote to debug and optimize your mobile webpages on your computer(window,mac,linux with chrome).<br>
+						3.+Add,Remote control to reload current webpage.<br>
+						4.+Add,Remote control to toggle disable cache.<br>
+						5.+Add,Remote control to clear cache.<br>
+						6.+Add,Remote control to clear cookies.<br>
+						7.+Add,Remote control to clear local storage.<br>
+						8.+Add,Remote control to clear all data(Cache,Cookies,Local Storage).<br>
+						9.+Add,Remote control to toggle full screen mode.<br>
+						10.+Add,Remote control to toggle keep awake.<br>
+						11.+Add,Clearly developer tools section.<br>
+						12.!*Fix,Http server not reconnect after awake from background.</p>
+						<p>For iPhone<br>
+						2.!+Add,Web inspector remote(weinre):remote to debug and optimize your mobile webpages on your computer(window,mac,linux with chrome).<br>
+						3.+Add,Remote control to reload current webpage.<br>
+						4.+Add,Remote control to toggle disable cache.<br>
+						5.+Add,Remote control to clear cache.<br>
+						6.+Add,Remote control to clear cookies.<br>
+						7.+Add,Remote control to clear local storage.<br>
+						8.+Add,Remote control to clear all data(Cache,Cookies,Local Storage).<br>
+						9.+Add,Remote control to toggle full screen mode.<br>
+						10.+Add,Remote control to toggle keep awake.<br>
+						11.+Add,Disable cache *when the switch button is ON*.<br>
+						11.!*Fix,Http server not reconnect after awake from background.<br>
+						12.-Remove.Clear cache,clear localstorage,clear cookies on restart *when the switch button is ON*.</p>
+						<p><strong>V3.9-2013.01.23</strong></p>
+						<p>For iPad<br>
+						1.+Add,HTTP Server for remote control.<br>
+						2.+Add,Remote control to load URL in MIHTool.<br>
+						3.+Add,Remote control to inject Javascript in current webpage:Such as,Inject <a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html">weinre</a> for web inspector&nbsp;remote.<br>
+						4.+Add,Emulate iPhone.<br>
+						5.+Add,Keep Awake.<br>
+						6.+Add,Share source code option.<br>
+						7.*Fix,Not update the source code by load a URL from history when preview editing source code issue.<br>
+						8.*Fix,In HTML editor,page switch issue.<br>
+						9.*Fix,User agent switch not save issue.</p>
+						<p>For iPhone<br>
+						1.+Add,HTTP Server for remote control *when the switch button is ON*.<br>
+						2.+Add,Remote control to load URL in MIHTool.<br>
+						3.+Add,Remote control to inject Javascript in current webpage:Such as,Inject <a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html">weinre</a> for web inspector&nbsp;remote.<br>
+						4.+Add,Keep Awake *when the switch button is ON*.<br>
+						5.+Add,Clear cache,clear localstorage,clear cookies on restart *when the switch button is ON*.<br>
+						6.+Add,Decent UI.</p>
+						<p><strong>V3.0-2013.01.10</strong></p>
+						<p>For iPad<br>
+						1.+Add,View webpage source code.<br>
+						2.+Add,View webpage generated source code.<br>
+						3.+Add,HTML editor with syntax highlighting and formatting.<br>
+						4.+Add,Edit source code with HTML editor and preview the result.<br>
+						5.+Add,Create a new webpage with HTML editor and preview it.<br>
+						6.+Add,JS Console development tool.<br>
+						7.*Fix,URL format issue.<br>
+						8.*Fix,Disable cache policy issue.</p>
+						<p><strong>V2.0-2012.12.26</strong></p>
+						<p>For iPad<br>
+						1.+Add,Show webkit repaint counter.<br>
+						2.+Add,More development tools(Firebug,YSlow,WhatFont,PageSpeed,GTmetrix,W3C Markup Validation Service…).<br>
+						3.+Add,User agent switcher.<br>
+						4.+Add,Evaluating JavaScript in the address bar.<br>
+						5.+Add,URL history.<br>
+						6.+Add,Running in background.<br>
+						7.+Add,Auto load the last webpage on restart.<br>
+						8.+Add,Save settings.<br>
+						9.+Add,Quit the App option(A quick way to restart the App)<br>
+						10.+Add,Disable cache.<br>
+						11.+Add,Clear History,clear cache,clear cookies, clear localstorage.<br>
+						12.+Add,Decent UI and layout.</p>
+						<p>For iPhone<br>
+						1.+Add,Show webkit repaint counter.</p>
+						<p><strong>V1.1-2012.12.18</strong><br>
+						1.+ add Firebug web development tool for iPad version.<br>
+						2.* url autofill with “http://” issue fixed.</p>
+					</div>
+				</div>
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /Slide 8 -->
+	
+</body>
 
-    <title>mihtool</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/unbug/mihtool.com">View on GitHub</a>
-
-          <h1 id="project_title">mihtool</h1>
-          <h2 id="project_tagline">mihtool.com</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/unbug/mihtool.com/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/unbug/mihtool.com/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">mihtool maintained by <a href="https://github.com/unbug">unbug</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+	<!-- SCRIPTS -->
+	<script src="js/html5shiv.js"></script>
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="fancybox/jquery.fancybox.pack-v=2.1.5.js"></script>
+	<script src="js/script.js"></script>
+	
+	<!-- fancybox init -->
+	<script>
+	$(document).ready(function(e) {
+		var lis = $('.nav > li');
+		menu_focus( lis[0], 1 );
+		
+		$(".fancybox").fancybox({
+			padding: 10,
+			helpers: {
+				overlay: {
+					locked: false
+				}
+			}
+		});
+		$('.re-link').on('click',function(){
+			window.location = this.href || this.getAttribute('data-url');
+		});
+	
+	});
+	</script>
+	<script type="text/javascript">
+	    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa45d0c08b83f49f9f9340e5e32050126' type='text/javascript'%3E%3C/script%3E"));
+	    (function(){
+	      var t = 0;
+	      function hb(){
+	      var aa = document.querySelectorAll('a');for(var i=0;i<aa.length;i++){if(/tongji/g.test(aa[i].href)){aa[i].style.display='none';clearInterval(t);break;};}}
+	      t = setInterval(hb,1000);
+	    })(); 
+	</script>
 </html>
