@@ -565,7 +565,13 @@ body {
 	position: absolute;
 	width: 30px;
 }
-
+#arrows>.share-button{
+	display: none !important;
+	bottom: 80px;
+}
+#arrows:hover>.share-button{
+	display: block !important;
+}
 #arrows div.disabled {
 	cursor: default;
 }
