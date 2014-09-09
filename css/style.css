@@ -249,6 +249,9 @@ body {
 #slide-1 a,#slide-1 a:hover,#slide-1 a:focus,#slide-1 a:active,#slide-1 a:link {
 	color: inherit;
 }
+a,a:hover,a:focus,a:active,a:link {
+	color: inherit;
+}
 
 @media (max-width: 991px) {
 	#slide-1 {
