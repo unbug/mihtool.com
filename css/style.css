@@ -227,7 +227,7 @@ body {
 	padding-top: 90px;
 }
 #slide-1 {
-	background-image: url('../images/bg5.jpg');
+	background-image: url('../images/bg4.jpg');
 	color: #ffffff;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -241,7 +241,6 @@ body {
     width: 100%;
 	background-attachment: relative;
 	background-position: center center;
-	-webkit-transform: tanslate3d(0,0,0);
 }
 
 #slide-1 i{
