@@ -70,7 +70,7 @@ $(document).ready(function(e) {
 				
 							var scroll_top = $(this).scrollTop();
 							
-							var lis = $('.nav > li');
+							var lis = $('.navbar .nav > li');
 							
 							for ( var i=tops.length-1; i>=0; i-- ) {
 								if ( scroll_top >= tops[i] ) {
@@ -150,12 +150,12 @@ function menu_focus( element, i ) {
 	else
 		$('.navbar').addClass('inv');
 	
-	$('.nav > li').removeClass('active');
+	$('.navbar .nav > li').removeClass('active');
 	$(element).addClass('active');
 	
 	var icon = $(element).find('.icon');
 	if(!icon || !icon[0]){return;}
-	var left_pos = icon.offset().left - $('.nav').offset().left;
+	var left_pos = icon.offset().left - $('.navbar .nav').offset().left;
 	var el_width = icon.width() + $(element).find('.text').width() + 10;
 	
 	$('.active-menu').stop(false, false).animate(
@@ -187,7 +187,7 @@ function enable_arrows( dataslide ) {
 *************/
 jQuery(document).ready(function ($) {
 	//Cache some variables
-	var links = $('.nav').find('li');
+	var links = $('.navbar .nav').find('li');
 	slide = $('.slide');
 	button = $('.button');
 	mywindow = $(window);
@@ -225,13 +225,13 @@ jQuery(document).ready(function ($) {
 ***************/
 jQuery(document).ready(function ($) {
 	//Cache some variables
-	var menu_item = $('.nav').find('li');
+	var menu_item = $('.navbar .nav').find('li');
 	
 	menu_item.hover(
 		function(e) {
 			var icon = $(this).find('.icon');
 			
-			var left_pos = icon.offset().left - $('.nav').offset().left;
+			var left_pos = icon.offset().left - $('.navbar .nav').offset().left;
 			var el_width = icon.width() + $(this).find('.text').width() + 10;
 			
 			var hover_bar = $('<div class="active-menu special-active-menu"></div>')
@@ -296,7 +296,7 @@ jQuery(document).ready(function ($) {
 			return;
 		
 		var slide = null;
-		var datasheet = $('.nav > li.active').data('slide');
+		var datasheet = $('.navbar .nav > li.active').data('slide');
 		var offset_top = false;
 		var offset_left = false;
 		

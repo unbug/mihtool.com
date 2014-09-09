@@ -80,13 +80,13 @@ body {
 	width: 80%;
 }
 
-.nav li {
+.navbar .nav li {
 	text-align: center;
 	white-space: nowrap;
 }
 
-.nav > li > a:hover,
-.nav > li > a:focus {
+.navbar .nav > li > a:hover,
+.navbar .nav > li > a:focus {
 	background-color: inherit;
 	outline: none;
 }
@@ -145,7 +145,7 @@ body {
 
 @media (max-width: 767px) {
 	
-	.nav li {
+	.navbar .nav li {
 		text-align: left;
 		white-space: nowrap;
 	}
@@ -177,24 +177,24 @@ body {
 		margin-right: 12px;
 	}
 			
-	.nav li[data-slide="1"],
-	.nav li[data-slide="6"] {
+	.navbar .nav li[data-slide="1"],
+	.navbar .nav li[data-slide="6"] {
 		background-color: #2f2f2f;
 	}
 	
-	.nav li[data-slide="2"] {
+	.navbar .nav li[data-slide="2"] {
 		background-color: #1abc9c;
 	}
 	
-	.nav li[data-slide="3"] {
+	.navbar .nav li[data-slide="3"] {
 		background-color: #e74c3c;
 	}
 	
-	.nav li[data-slide="4"] {
+	.navbar .nav li[data-slide="4"] {
 		background-color: #34495e;
 	}
 	
-	.nav li[data-slide="5"] {
+	.navbar .nav li[data-slide="5"] {
 		background-color: #e67e22;
 	}
 	
@@ -218,7 +218,6 @@ body {
 	background-color: #e4e6e5;
 	color: #4e4e4e;
 	font-size: 35px;
-	line-height: 50px;
 	text-align: center;
 }
 .slide.black {
@@ -625,4 +624,22 @@ p{
 .left-ajust{
 	font-size: 24px;
 	text-align: left;
+}
+.panel{
+	padding-bottom: 0;
+	margin-bottom: 5px;
+}
+.panel .panel-heading{
+	margin-bottom: 0;
+}
+
+.bs-callout{
+	padding: 20px;
+	margin: 20px 0;
+	border: 0px solid #eee;
+	border-left-width: 5px;
+	border-radius: 3px;
+}
+.bs-callout-info{
+	border-left-color: #5bc0de;
 }
