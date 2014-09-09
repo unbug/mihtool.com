@@ -256,7 +256,7 @@ a,a:hover,a:focus,a:active,a:link {
 
 @media (max-width: 991px) {
 	#slide-1 {
-		background-position: -70% 0, 170% 0;
+		/*background-position: -70% 0, 170% 0;*/
 	}
 }
 
