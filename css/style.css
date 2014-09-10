@@ -629,7 +629,7 @@ a,a:hover,a:focus,a:active,a:link {
 	cursor: pointer;
 }
 p{
-	word-break: break-all;
+	/*word-break: break-all;*/
 }
 .left-ajust{
 	font-size: 24px;
