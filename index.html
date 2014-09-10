@@ -326,32 +326,24 @@
 				<div class="col-sm-1 hidden-sm">&nbsp;</div>
 				<div class="col-12 font-light">
 					<ul class="nav nav-tabs" role="tablist" id="videosTab1">
-					  <li class="active"><a href="#videosTab1_1" role="tab" data-toggle="tab">YouTube</a></li>
+					  <li class="active"><a href="#videosTab" role="tab" data-toggle="tab">YouTube</a></li>
 					  <li><a href="#videosTab1_2" role="tab" data-toggle="tab">Youku</a></li>
 					</ul>
 					<div class="tab-content">
-					  <div class="tab-pane fade in active" id="videosTab1_1">
-						<h2 class="left-ajust">Inline web inspector</h2>
-					  	<iframe width="640" height="480" src="//www.youtube.com/embed/I-joxZbdk0s" frameborder="0" allowfullscreen></iframe>
-					  </div>
-					  <div class="tab-pane fade" id="videosTab1_2">
-					  	<h2 class="left-ajust">iPad版内嵌的 web inspector</h2>
-					  	<iframe src="http://player.youku.com/embed/XNTA4NjA0Mzg4" width="510" height="498" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-					  </div>
-					</div>
-					<ul class="nav nav-tabs" role="tablist" id="videosTab2">
-					  <li class="active"><a href="#videosTab2_1" role="tab" data-toggle="tab">YouTube</a></li>
-					  <li><a href="#videosTab2_2" role="tab" data-toggle="tab">Youku</a></li>
-					</ul>
-					<div class="tab-content">
-					  <div class="tab-pane fade in active" id="videosTab2_1">
-					  	<h2 class="left-ajust">Polyfill Manager(simulate APIs for javaScript to Objective-C communication)</h2>
-					  	<iframe width="640" height="480" src="//www.youtube.com/embed/uL2feHKevRE" frameborder="0" allowfullscreen></iframe>
-					  </div>
-					  <div class="tab-pane fade" id="videosTab2_2">
-		                <h2 class="left-ajust">Polyfill Manager(模拟javascript与Native App互相调用)</h2>
-					  	<iframe src="http://player.youku.com/embed/XNTc5ODUxNDY4" width="510" height="498" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-					  </div>
+						<script type="text/template" id="video_content">
+						  <div class="tab-pane fade in active" id="videosTab">
+							<h2 class="left-ajust">Inline web inspector</h2>
+						  	<iframe width="640" height="480" src="//www.youtube.com/embed/I-joxZbdk0s" frameborder="0" allowfullscreen></iframe>
+						  	<h2 class="left-ajust">Polyfill Manager(simulate APIs for javaScript to Objective-C communication)</h2>
+						  	<iframe width="640" height="480" src="//www.youtube.com/embed/uL2feHKevRE" frameborder="0" allowfullscreen></iframe>
+						  </div>
+						  <div class="tab-pane fade" id="videosTab1_2">
+						  	<h2 class="left-ajust">iPad版内嵌的 web inspector</h2>
+						  	<iframe src="http://player.youku.com/embed/XNTA4NjA0Mzg4" width="510" height="498" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+						  	<h2 class="left-ajust">Polyfill Manager(模拟javascript与Native App互相调用)</h2>
+						  	<iframe src="http://player.youku.com/embed/XNTc5ODUxNDY4" width="510" height="498" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+						  </div>
+						</script>
 					</div>
 				</div>
 				<div class="col-sm-1 hidden-sm">&nbsp;</div>
@@ -812,8 +804,13 @@
 		$('.re-link').on('click',function(){
 			window.location = this.href || this.getAttribute('data-url');
 		});
-		new Share('.share-button');
+		setTimeout(function(){
+			var script= $('#video_content'),
+				pel = script.parent();
+			pel.html(script.html());
+		},5000);
 	});
+	new Share('.share-button');
 	</script>
 	<script type="text/javascript">
 	    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
