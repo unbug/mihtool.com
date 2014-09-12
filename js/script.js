@@ -116,7 +116,7 @@ $(function() {
 				var left_pos = $('#slide-3 .row').width() - $('body').width();
 				left_pos /= -2;
 				
-				$('#slide-3 .row').css('left', left_pos);
+				$('#slide-3 .row').css('left', 0);
 			
 			},
 			pause
