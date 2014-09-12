@@ -653,3 +653,12 @@ p{
 .bs-callout-info{
 	border-left-color: #5bc0de;
 }
+.features-detail{
+	background-color: #e4e6e5;
+	color: #4e4e4e;
+	font-size: 20px;
+	padding: 20px 0;
+}
+.features-detail img{
+	width: 100%;
+}
