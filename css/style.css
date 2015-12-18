@@ -6,7 +6,19 @@
  * Version: 1.0
  * URL: http://blacktie.co
  */
- 
+@-webkit-keyframes slideInUp {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
 .font-thin {
 	font-family: "Titillium Web","Microsoft YaHei",Tahoma,Verdana,"SimSun", sans-serif;
 	font-weight: 200;
@@ -146,60 +158,60 @@ body {
 }
 
 @media (max-width: 767px) {
-	
+
 	.navbar .nav li {
 		text-align: left;
 		white-space: nowrap;
 	}
-	
+
 	.navbar-responsive-collapse  {
 		width: 100%;
 	}
-	
+
 	.active-menu {
 		display: none !important;
 	}
-	
+
 	.navbar-toggle {
 		margin-right: 10px;
 	}
-	
+
 	.navbar {
 		background-color: #e4e6e5 !important;
 		padding: 0;
 	}
-	
+
 	.navbar .nav a {
 		color: #e4e6e5;
 		font-size: 16px;
 		padding-left: 0;
 	}
-	
+
 	.icon {
 		margin-right: 12px;
 	}
-			
+
 	.navbar .nav li[data-slide="1"],
 	.navbar .nav li[data-slide="6"] {
 		background-color: #2f2f2f;
 	}
-	
+
 	.navbar .nav li[data-slide="2"] {
 		background-color: #1abc9c;
 	}
-	
+
 	.navbar .nav li[data-slide="3"] {
 		background-color: #e74c3c;
 	}
-	
+
 	.navbar .nav li[data-slide="4"] {
 		background-color: #34495e;
 	}
-	
+
 	.navbar .nav li[data-slide="5"] {
 		background-color: #e67e22;
 	}
-	
+
 	.navbar-brand {
 		margin: 0;
 		text-align: left;
@@ -271,31 +283,31 @@ a,a:hover,a:focus,a:active,a:link {
 	#home-row-2 {
 		padding-top: 25px;
 	}
-	
+
 	#home-row-1 h1 {
 		font-size: 54px;
 	}
-	
+
 	#home-row-1 h4 {
 		font-size: 32px;
 	}
-	
+
 	#home-row-2 {
 		font-size: 25px;
 	}
-	
+
 	#home-row-2 .col-12 {
 		height: 232px;
 		padding-top: 30px;
 	}
-	
+
 	#home-row-2 .col-12 .home-hover {
 		height: 166px;
 		overflow: hidden;
 		padding-top: 26px;
 		transition: all ease-in .5s;
 	}
-	
+
 	#home-row-2 .col-12 .home-hover:hover {
 		height: 166px;
 		padding-top: 0;
@@ -306,15 +318,15 @@ a,a:hover,a:focus,a:active,a:link {
 	#home-row-2 {
 		padding-top: 16px;
 	}
-	
+
 	#home-row-1 h1 {
 		font-size: 35px;
 	}
-	
+
 	#home-row-1 h4 {
 		font-size: 21px;
 	}
-	
+
 	#home-row-2 {
 		font-size: 16px;
 	}
@@ -330,24 +342,24 @@ a,a:hover,a:focus,a:active,a:link {
 		font-size: 45px;
 		padding-bottom: 50px;
 	}
-	
+
 	.line-row .hr {
 		background-color: #e4e6e5;
 		height: 5px;
 		margin: 0 auto;
 		width: 33%;
 	}
-	
+
 	.subtitle-row {
 		font-size: 35px;
 		padding-bottom: 40px;
 		padding-top: 40px;
 	}
-	
+
 	.content-row {
 		padding-top: 45px;
 	}
-	
+
 	.content-row i,
 	#about-row-5 i {
 		display: block;
@@ -355,45 +367,45 @@ a,a:hover,a:focus,a:active,a:link {
 		max-height: 100%;
 		max-width: 100%;
 	}
-	
+
 	.content-row h2 {
 		font-size: 28px;
 		padding-bottom: 40px;
 	}
-	
+
 	.content-row h4 {
 		font-family: "Titillium Web", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 		font-size: 20px;
 		font-weight: 300;
 	}
-	
+
 	i {
 		font-size: 80px;
 		color: white;
 	}
-	
+
 
 @media (max-width: 767px) {
 	.title-row {
 		font-size: 34px;
 		padding-bottom: 33px;
 	}
-	
+
 	.subtitle-row {
 		font-size: 26px;
 		padding-bottom: 26px;
 		padding-top: 26px;
 	}
-	
+
 	.content-row {
 		padding-top: 29px;
 	}
-	
+
 	.content-row h2 {
 		font-size: 24px;
 		padding-bottom: 26px;
 	}
-	
+
 	.content-row h4 {
 		font-size: 20px;
 	}
@@ -407,7 +419,7 @@ a,a:hover,a:focus,a:active,a:link {
 	text-align: left;
 	width: 100%;
 }
-	
+
 	#slide-3 .col-12 {
 		display: inline-block;
 		height: 451px;
@@ -423,19 +435,19 @@ a,a:hover,a:focus,a:active,a:link {
 		margin: 0 auto;
 		width: 100%;
 	}
-	
+
 @media (max-width: 991px) {
 	#slide-3 {
 		text-align: center;
 		width: 100%;
 	}
-	
+
 	#slide-3 .row {
 		left: 0 !important;
 		margin: 0;
 		width: 100% !important;
 	}
-	
+
 	#slide-3 .col-12 {
 		height: auto;
 		width: 50%
@@ -449,7 +461,7 @@ a,a:hover,a:focus,a:active,a:link {
 		width: auto;
 	}
 }
-	
+
 @media (max-width: 767px) {
 	#slide-3 .col-12 {
 		width: 100%;
@@ -486,7 +498,7 @@ a,a:hover,a:focus,a:active,a:link {
 		background-image: none;
 	}
 }
-	
+
 	#slide-6 .line-row .hr,.slide.black .line-row .hr {
 		background-color: #e4e6e5;
 		color: #e4e6e5;
@@ -496,37 +508,37 @@ a,a:hover,a:focus,a:active,a:link {
 		background-color: #4e4e4e;
 		color: #4e4e4e;
 	}
-	
+
 @media (max-width: 767px) {
 	.with-hover-text{
 		margin-bottom: 2em;
 		margin-top: 1em;
 	}
 }
-	
+
 	#contact-row-4 {
 		padding-top: 125px;
 	}
-	
+
 	#contact-row-4 .col-12 {
 		height: 175px;
 		overflow: hidden;
 		padding-top: 20px;
 		transition: all ease-in .5s;
 	}
-	
+
 	#contact-row-4 img {
 		display: block;
 		margin: 0 auto;
 		max-height: 100%;
 		max-width: 100%;
 	}
-	
+
 	#contact-row-4 .col-12:hover {
 		height: 175px;
 		padding-top: 0;
 	}
-	
+
 	#contact-row-4 .col-12 .hover-text {
 		display: none;
 		font-size: 20px;
@@ -557,7 +569,7 @@ a,a:hover,a:focus,a:active,a:link {
 }
 
 #arrows {
-	bottom: 10%;
+	bottom: 15%;
 	height: 80px;
 	position: fixed;
 	right: 10%;
@@ -661,4 +673,31 @@ p{
 }
 .features-detail img{
 	width: 100%;
+}
+
+.codelf{
+  position: fixed;
+  z-index: 20;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  margin: 0 auto;
+  background: #e74c3c;
+  text-align: center;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-name: slideInUp;
+  animation-delay: 300ms;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-name: slideInUp;
+  -webkit-animation-delay: 300ms;
+}
+.codelf a{
+  text-decoration: underline;
 }
