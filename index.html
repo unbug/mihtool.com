@@ -20,7 +20,7 @@
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -92,9 +92,16 @@
 				</div><!-- /col-12 -->
 			</div><!-- /row -->
 			<div id="home-row-2" class="row clearfix">
-				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="2"><i class="icon icon-download-alt"></i></div><span>INSTALL</span></div>
-				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="4"><i class="icon icon-gift"></i></div><span>FEATURES</span></div>
-				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="8"><i class="icon icon-facetime-video"></i></div><span>VIDEOS</span></div>
+				<div class="col-12 col-sm-3"><div class="home-hover navigation-slide" data-slide="2"><i class="icon icon-download-alt"></i></div><span>INSTALL</span></div>
+				<div class="col-12 col-sm-3"><div class="home-hover navigation-slide" data-slide="4"><i class="icon icon-gift"></i></div><span>FEATURES</span></div>
+				<div class="col-12 col-sm-3"><div class="home-hover navigation-slide" data-slide="8"><i class="icon icon-facetime-video"></i></div><span>VIDEOS</span></div>
+				<div class="col-12 col-sm-3" id="donate_btn">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="donate_form" style="display: none;">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="5DSCD8Q6YQAJN">
+          </form>
+          <div class="home-hover"><i class="icon icon-money"></i></div><span>DONATE</span>
+        </div>
 			</div><!-- /row -->
 		</div><!-- /container -->
 	</div><!-- /slide1 -->
@@ -1114,6 +1121,9 @@
 				pel = script.parent();
 			pel.html(script.html());
 		},5000);
+    $('#donate_btn').click(function(){
+      $('#donate_form').submit();
+    });
 	});
 	new Share('.share-button');
 	</script>
