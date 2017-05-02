@@ -275,7 +275,7 @@ a,a:hover,a:focus,a:active,a:link {
 
 @media (max-width: 767px) {
 	#slide-1 {
-		background-image: none;
+		/*background-image: none;*/
 	}
 }
 
@@ -431,7 +431,7 @@ a,a:hover,a:focus,a:active,a:link {
 	#slide-3 a,
 	#slide-3 img {
 		display: inline-block;
-		height: 100%;
+		height: auto;
 		margin: 0 auto;
 		width: 100%;
 	}
