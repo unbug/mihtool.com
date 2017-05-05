@@ -722,3 +722,9 @@ p{
 .codelf a{
   text-decoration: underline;
 }
+
+@media (max-width: 767px) {
+  #slide-8 {
+    overflow-x: hidden;
+  }
+}
