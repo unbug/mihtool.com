@@ -497,6 +497,11 @@ a,a:hover,a:focus,a:active,a:link {
 		font-size: 80px;
 		color: white;
 	}
+@media (max-width: 767px) {
+  #slide-4 p {
+    word-break: break-all !important;
+  }
+}
 
 
 #slide-5 {
