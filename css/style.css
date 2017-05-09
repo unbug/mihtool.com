@@ -511,7 +511,7 @@ i {
 #slide-4 h2 {
   word-break: break-word !important;
 }
-#slide-4 p, #slide-4 div {
+#slide-4 #slide-4 div {
   word-break: break-all !important;
 }
 
@@ -759,4 +759,8 @@ p {
   #slide-8 {
     overflow-x: hidden;
   }
+}
+
+#slide-9 p {
+  word-break: break-all;
 }
