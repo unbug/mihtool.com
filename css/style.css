@@ -261,6 +261,9 @@ body {
 #slide-1 i{
 	font-size: 48px;
 }
+#slide-1 .col-12 {
+  cursor: pointer;
+}
 #slide-1 a,#slide-1 a:hover,#slide-1 a:focus,#slide-1 a:active,#slide-1 a:link {
 	color: inherit;
 }
@@ -441,10 +444,10 @@ a,a:hover,a:focus,a:active,a:link {
 
 	#slide-3 .col-12 {
 		display: inline-block;
-		height: 451px;
+		height: 360px;
 		margin: 0;
 		padding: 0;
-		width: 452px;
+		width: 480px;
 	}
 
 	#slide-3 a,
