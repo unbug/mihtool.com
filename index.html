@@ -1253,7 +1253,8 @@
       var url = 'images/bg'+Math.max(1, Math.round(Math.random()*4))+'.jpg';
       var img = new Image();
       img.onload = function(){
-        $('#slide-1').css({'backgroundImage': 'url('+url+')'});
+        !window.__switch_bg && $('#slide-1').css({'backgroundImage': 'url('+url+')'});
+        window.__switch_bg = true;
       }
       img.src = url;
     });
