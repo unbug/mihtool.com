@@ -17,7 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" media="screen">
   <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/style.css?20170510-03">
+	<link rel="stylesheet" type="text/css" href="css/style.css?20170514-01">
 	<link rel="prefetch" href="images/zoom.png">
 	<link rel="prefetch" href="images/bg1.jpg">
 	<link rel="prefetch" href="images/bg2.jpg">
@@ -83,7 +83,7 @@
 			<div id="home-row-1" class="row clearfix">
 				<div class="col-12">
 					<img src="images/mih/logo/iPad-Retina.png" width="80"/>
-					<h1 class="font-semibold">MIHTool <span class="font-thin"><a class="top_version" href="#slide-9" onclick="goToByScroll(9)">7.0</a></span></h1>
+					<h1 class="font-semibold">MIHTool <span class="font-thin"><a class="top_version" href="#slide-9" onclick="goToByScroll(9)">7.1</a></span></h1>
 					<h4 class="font-thin">MIHTool helps Front-End Engineers to  <span class="font-semibold">debug</span> and  <span class="font-semibold">optimize</span> their webpages on iPad and iPhone</h4>
 					<br>
 					<br>
@@ -128,7 +128,7 @@
 				</div><!-- /col12 -->
 				<div class="col-12 col-lg-3 col-sm-6">
 					<h2 class="font-semibold">Feedback</h2>
-					<h4 class="font-thin"><a target="_blank" class="btn btn-info btn-lg re-link" role="button" href="#slide-5" onclick="goToByScroll(6)">GitHub</a></h4>
+					<h4 class="font-thin"><a target="_blank" class="btn btn-info btn-lg" role="button" href="#slide-6" onclick="goToByScroll(6)">GitHub</a></h4>
 				</div><!-- /col12 -->
 				<div class="col-12 col-lg-3 col-sm-6" style="padding-right: 0;">
 					<h2 class="font-semibold">Learn More</h2>
@@ -174,16 +174,16 @@
 					<div class="tab-content">
 					  <div class="tab-pane fade in active" id="features_ipad">
 						  <h2 class="bs-callout bs-callout-info">MIHTool helps Front-End Engineers to debug and optimize their webpages on iPad and iPhone</h2>
-              <p>1.Action Extension for Safari, brings remote Web Inspector to debug your webpages in Safari. A Inline Web Inspector that is a real Chrome like DevTool for iPad Safari.
+              <p>1.Action Extension for Safari, brings remote Web Inspector to debug your webpages in Safari. A Inline Web Inspector that is a real Chrome like DevTool for iOS Safari.
                 <button type="button" class="btn btn-success btn-xs" data-toggle="collapse" data-target="#features_ipad_1">Learn More...</button>
                 <section id="features_ipad_1" class="features-detail collapse in row">
                   <div class="col-12 col-sm-6">
                     <img src="images/mih/screenshots/9.jpeg"/>
-                    <img src="images/mih/screenshots/3.jpeg"/>
+                    <img src="images/mih/screenshots/6.jpeg"/>
                   </div>
                   <div class="col-12 col-sm-6">
-                    MIHToo Action Extension for Safari is the first App that brings a real Chrome like Inline DevTool for iPad Safari.
-                    Now, you can inspector your web pages in iOS Safari and Safari View Controller right on your iPad without a desktop computer.
+                    MIHToo Action Extension for Safari is the first App that brings a real Chrome like Inline DevTool for iOS Safari.
+                    Now, you can inspector your web pages in iOS Safari and Safari View Controller right on your iPad and iPhone without a desktop computer.
                     You can also remote Web Inspector to debug your webpages in Safari and Safari View Controller.
                     <br/>
                     To open MIHToo Action Extension, just click the Share Button of Safari and select MIHTool, for the first time, you might have to enable it in the more list.
@@ -406,12 +406,12 @@
                 <section id="features_ipad_zh_1" class="features-detail collapse in row">
                   <div class="col-12 col-sm-6">
                     <img src="images/mih/screenshots/9.jpeg"/>
-                    <img src="images/mih/screenshots/3.jpeg"/>
+                    <img src="images/mih/screenshots/6.jpeg"/>
                   </div>
                   <div class="col-12 col-sm-6">
                     有了 MIHTool 的 iOS Safari 扩展, 你可以在线远程调试 Safari 和 Safari View Controller（App 里调 Safari 组件）打开的页面了.
                     <br />
-                    并且 MIHTool 的 iOS Safari 扩展是首个将类 Chrome 的 DevTool 带到 Safari 里的 App, 你可以随时随地用扩展的内嵌 Web inspector 仅用 iPad 就能直接调试 Safari 里打开的页面了.
+                    并且 MIHTool 的 iOS Safari 扩展是首个将类 Chrome 的 DevTool 带到 Safari 里的 App, 你可以随时随地用扩展的内嵌 Web inspector 仅用 iPad 或 iPhone 就能直接调试 Safari 里打开的页面了.
                     <br />
                     要打开 MIHTool 的 iOS Safari 扩展, 只需要点击 Safari 的分享按钮里选 MIHTool 就可以了, 第一次使用需要在更多列表里先启用它。
                     <br />
@@ -745,6 +745,28 @@
 				<div class="col-sm-1 hidden-sm">&nbsp;</div>
 				<div class="col-12 font-light left-ajust">
 					<div class="panel-group" id="log_accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#log_accordion" href="#log_v7_1">
+                    V7.1-2017.05.14
+                  </a>
+                </h4>
+              </div>
+              <div id="log_v7_1" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p>
+                    For iPad <br>
+                    1. +Add, New toolbars for Inline Web Inspector.<br>
+                    2. !*Fix, Switch weinre not working.<br>
+                    <br>
+                    For iPhone <br>
+                    1. !+Add, Inline Web Inspector for Safari, a Chrome like DevTool (Includes Elements,Resources,Network,Console panel.) for iOS Safari.<br>
+                    2. !*Fix, Switch weinre not working.<br>
+                  </p>
+                </div>
+              </div>
+            </div>
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
@@ -1125,7 +1147,7 @@
 					      	<p>For iPad<br>
 								1.+Add,HTTP Server for remote control.<br>
 								2.+Add,Remote control to load URL in MIHTool.<br>
-								3.+Add,Remote control to inject Javascript in current webpage:Such as,Inject <a class="re-link"  href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html">weinre</a> for web inspector&nbsp;remote.<br>
+								3.+Add,Remote control to inject Javascript in current webpage:Such as,Inject <a class="re-link"  href="https://people.apache.org/~pmuellr/weinre/docs/latest/Home.html">weinre</a> for web inspector&nbsp;remote.<br>
 								4.+Add,Emulate iPhone.<br>
 								5.+Add,Keep Awake.<br>
 								6.+Add,Share source code option.<br>
@@ -1135,7 +1157,7 @@
 								<p>For iPhone<br>
 								1.+Add,HTTP Server for remote control *when the switch button is ON*.<br>
 								2.+Add,Remote control to load URL in MIHTool.<br>
-								3.+Add,Remote control to inject Javascript in current webpage:Such as,Inject <a class="re-link"  href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html">weinre</a> for web inspector&nbsp;remote.<br>
+								3.+Add,Remote control to inject Javascript in current webpage:Such as,Inject <a class="re-link"  href="https://people.apache.org/~pmuellr/weinre/docs/latest/Home.html">weinre</a> for web inspector&nbsp;remote.<br>
 								4.+Add,Keep Awake *when the switch button is ON*.<br>
 								5.+Add,Clear cache,clear localstorage,clear cookies on restart *when the switch button is ON*.<br>
 								6.+Add,Decent UI.</p>
@@ -1268,13 +1290,21 @@
 
       new Share('.share-button');
 
-      var url = 'images/bg'+Math.max(1, Math.round(Math.random()*4))+'.jpg';
-      var img = new Image();
-      img.onload = function(){
-        !window.__switch_bg && $('#slide-1').css({'backgroundImage': 'url('+url+')'});
-        window.__switch_bg = true;
+      function getRandomIntInclusive(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
       }
-      img.src = url;
+
+      if (!window.__switch_bg) {
+        window.__switch_bg = true;
+        var url = 'images/bg'+getRandomIntInclusive(1, 5)+'.jpg';
+        var img = new Image();
+        img.onload = function(){
+          $('#slide-1').css({'backgroundImage': 'url('+url+')'});
+        }
+        img.src = url;
+      }
     });
   </script>
   <script type="text/javascript">
