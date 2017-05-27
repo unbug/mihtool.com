@@ -529,7 +529,6 @@ i {
 #slide-6 {
   background-color: #2f2f2f;
   color: #e4e6e5;
-  padding-bottom: 350px;
   padding-top: 90px;
 }
 
@@ -764,4 +763,30 @@ p {
 
 #slide-9 p {
   word-break: break-all;
+}
+
+.donate {
+  display: block;
+  padding-bottom: 5rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+.donate form {
+  display: inline-block;
+}
+.donate .bd {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.zhifubao, .wechatpay {
+  margin-right: 1rem;
+  margin-top: -5rem;
+  width: 10rem;
+}
+
+.paypal {
+  width: 10rem;
 }
