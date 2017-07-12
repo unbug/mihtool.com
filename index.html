@@ -269,7 +269,7 @@
                   </div>
                 </section>
               </p>
-              <p>6.Remote control(With HTTP Server):Remote to,Load URL in MIHTool|Safari|Chrome;Inject Javascript in current webpage;Clear website data;Get HAR data;Get source code;Get screenshots…
+              <p>6.Remote control(With HTTP Server):Remote to,Load URL in MIHTool|Safari;Inject Javascript in current webpage;Clear website data;Get HAR data;Get source code;Get screenshots…
                 <button type="button" class="btn btn-success btn-xs" data-toggle="collapse" data-target="#features_ipad_6">Learn More...</button>
                 <section id="features_ipad_6" class="features-detail collapse in row">
                   <div class="col-12 col-sm-6">
@@ -277,7 +277,7 @@
                     <br />
                     Open the HTTP link from a remote computer,you will see many commands are available for you.
                     <br />
-                    Almost each feature of MIHTool can be remote control with it's command,such as Load URL in MIHTool|Safari|Chrome;Web Inspector;Inject Javascript in current webpage;View history;Clear website data;Get HAR data;Get source code;Get screenshots,and so on.
+                    Almost each feature of MIHTool can be remote control with it's command,such as Load URL in MIHTool|Safari;Web Inspector;Inject Javascript in current webpage;View history;Clear website data;Get HAR data;Get source code;Get screenshots,and so on.
                     <br />
                     All remote commands are REST like so you can write some auto-run scripts to automatically test your wepages.This is very conveniently for you to control multi devices form a single computer at the same time.
                   </div>
@@ -331,13 +331,16 @@
               <p>14.Disable cache.</p>
               <p>15.Clear history,clear cache,clear cookies, clear local storage.</p>
               <p>16.Keep awake(Default is ON).</p>
-              <p>17.HAR Viewer.(Also see <a target="_blank" class="re-link" href="https://github.com/unbug/logproxy">logproxy</a>)
+              <p>17.HAR Viewer (network traffic).
                 <button type="button" class="btn btn-success btn-xs" data-toggle="collapse" data-target="#features_ipad_17">Learn More...</button>
                 <section id="features_ipad_17" class="features-detail collapse in row">
                   <div class="col-12 col-sm-6">
-                    With HAR Viewer you can see your webpages network traffic waterfall and export the HAR data for more advanced research.
+                    With HAR Viewer you can see your all of webpages network traffic waterfall, you'll never miss any request's log,
+                    it's better then the network panel within the Web Inspector.
                     <br />
-                    HAR Viewer is iPad only,for iPhone you can use remote control to export HAR data and view in <a class="re-link" href="http://www.softwareishard.com/har/viewer/">Online HAR Viewer</a>(Be sure the "Validate data before processing?" box is un-checked .)
+                    You can use HAR Viewer in the iPad version, the remote HAR Viewer is available for both iPad and iPhone.
+                    <br />
+                    You can also use remote control to export HAR data and view in <a class="re-link" href="http://www.softwareishard.com/har/viewer/">Online HAR Viewer</a>(Be sure the "Validate data before processing?" box is un-checked .)
                   </div>
                   <div class="col-12 col-sm-6">
                     <img src="images/mih/screenshots/5.jpeg"/>
@@ -389,7 +392,7 @@
               <p>1.Action Extension for Safari, brings remote Web Inspector to debug your webpages in Safari.</p>
               <p>2.Web inspector remote(weinre):remote to debug and optimize your mobile webpages on your computer(window,mac,linux with chrome).</p>
               <p>3.Online Web Inspector.</p>
-              <p>4.Remote control(With HTTP Server):Remote to,Load URL in MIHTool|Safari|Chrome;Inject Javascript in current webpage;Clear website data;Get HAR data;Get source code;Get screenshots…</p>
+              <p>4.Remote control(With HTTP Server):Remote to,Load URL in MIHTool|Safari; View HTTP traffic; Inject Javascript in current webpage;Clear website data;Get HAR data;Get source code;Get screenshots…</p>
               <p>5.Show WebKit Debug Borders(Compositing Render Layers).</p>
               <p>6.Show Webkit Repaint Counter(Paint Rects).</p>
               <p>7.Evaluating JavaScript in the address bar.</p>
@@ -415,6 +418,7 @@
                     并且 MIHTool 的 iOS Safari 扩展是首个将类 Chrome 的 DevTool 带到 Safari 里的 App, 你可以随时随地用扩展的内嵌 Web inspector 仅用 iPad 或 iPhone 就能直接调试 Safari 里打开的页面了.
                     <br />
                     要打开 MIHTool 的 iOS Safari 扩展, 只需要点击 Safari 的分享按钮里选 MIHTool 就可以了, 第一次使用需要在更多列表里先启用它。
+                    当你激活它，弹窗的 URL 可以远程调试，如果同时按 "OK" 则可用内嵌的 Web Inspector 直接调试。
                     <br />
                     与 Chrome DevTools 类似,有 Elements, Resources, Network, Timeline, Console 面板.并且针对触屏进行了优化，可以进行最大化，最小化。
                     注意: 如果你的Network 或者 Timeline 面板无数据，需要将圆形的录制开关打开成 <span style="color: red;">红色</span>.
@@ -554,13 +558,15 @@
               <p>14.禁止缓存.</p>
               <p>15.清除历史,清除缓存,清除cookie, 清除localstorage.</p>
               <p>16.保持唤醒状态(默认开启).</p>
-              <p>17.查看当前页面的HAR.(另推荐 <a class="re-link" href="https://github.com/unbug/logproxy">logproxy</a>)
+              <p>17.查看当前页面的 HTTP 日志.
                 <button type="button" class="btn btn-success btn-xs" data-toggle="collapse" data-target="#features_ipad_zh_17">展开更多...</button>
                 <section id="features_ipad_zh_17" class="features-detail collapse in row">
                   <div class="col-12 col-sm-6">
-                    通过 HAR Viewer 查看页面HTTP请求的 waterfall。或者将 HAR 数据导出分析页面加载性能。
+                    通过 HAR Viewer 查看页面HTTP请求的日志。弥补了 Web Inspector 的不足.
                     <br />
-                    HAR Viewer 是iPad独有的，在 iPhone 上你也可以通过远程控制导出 HAR 数据然后放到<a class="re-link" href="http://www.softwareishard.com/har/viewer/">Online HAR Viewer</a> 查看(需要去掉 "Validate data before processing?" 复选框的勾选.)
+                    iPad 版自带了 HAR Viewer，而 iPhone 和 iPad 都支持远程版本的 HAR Viewer.
+                    <br />
+                    你也可以通过远程控制导出 HAR 数据然后放到<a class="re-link" href="http://www.softwareishard.com/har/viewer/">Online HAR Viewer</a> 查看(需要去掉 "Validate data before processing?" 复选框的勾选.)
                   </div>
                   <div class="col-12 col-sm-6">
                     <img src="images/mih/screenshots/5.jpeg"/>
