@@ -725,7 +725,7 @@ p {
   margin-bottom: 10px;
 }
 
-.codelf {
+.notice-links {
   position: fixed;
   z-index: 20;
   bottom: 0;
@@ -751,7 +751,7 @@ p {
   -webkit-animation-delay: 300ms;
 }
 
-.codelf a {
+.notice-links a {
   text-decoration: underline;
 }
 
